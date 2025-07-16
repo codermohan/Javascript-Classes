@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    // 1) var is function‑scoped (or global)
+function testVar() {
+  var a = 1;
+  if (true) {
+    var a = 2;      // same variable!
+    console.log(a); // 2
+  }
+  console.log(a);   // 2
+}
+testVar();
+
+// 2) let is block‑scoped
+function testLet() {
+  let b = 1;
+  if (true) {
+    let b = 2;      // a new, inner‑block b
+    console.log(b); // 2
+  }
+  console.log(b);   // 1
+}
+testLet();
+
+// 3) const creates a read‑only binding
+const c = 3;
+console.log(c);     // 3
+// c = 4;           // Uncaught TypeError: Assignment to constant variable.
+
+// But const with objects still lets you change properties:
+const obj = { x: 1 };
+obj.x = 2;          // ✅ allowed
+console.log(obj.x); // 2
+// obj = {};        // ❌ TypeError: Assignment to constant variable.
+</body>
+</html>

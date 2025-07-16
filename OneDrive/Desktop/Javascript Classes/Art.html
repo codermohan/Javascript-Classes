@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Arithmetic Operators Demo</title>
+  <style>
+    body { font-family: sans-serif; padding: 1em; }
+    .op { margin-bottom: 0.5em; }
+    .symbol { font-weight: bold; }
+  </style>
+</head>
+<body>
+  <h1>JavaScript Arithmetic Operators</h1>
+  <div id="results"></div>
+
+  <script>
+    const resultsDiv = document.getElementById('results');
+
+    // Helper to append a line
+    function addResult(symbol, expression, value) {
+      const el = document.createElement('div');
+      el.className = 'op';
+      el.innerHTML = `<span class="symbol">${symbol}</span>
+                      &nbsp; ${expression} = <strong>${value}</strong>`;
+      resultsDiv.appendChild(el);
+    }
+
+    // 1) Addition
+    addResult('+', '5 + 3', 5 + 3);
+
+    // 2) Subtraction
+    addResult('-', '10 - 4', 10 - 4);
+
+    // 3) Multiplication
+    addResult('×', '6 * 7', 6 * 7);
+
+    // 4) Division
+    addResult('÷', '20 / 5', 20 / 5);
+
+    // 5) Modulo (remainder)
+    addResult('%', '17 % 3', 17 % 3);
+
+    // 6) Exponentiation
+    addResult('**', '2 ** 5', 2 ** 5);
+
+    // 7) Increment
+    let x = 0;
+    x++;
+    addResult('++', 'let x = 0; x++', x);
+
+    // 8) Decrement
+    let y = 2;
+    y--;
+    addResult('--', 'let y = 2; y--', y);
+
+    // 9) Compound assignment
+    let z = 5;
+    z += 3;
+    addResult('+=', 'let z = 5; z += 3', z);
+  </script>
+</body>
+</html>
