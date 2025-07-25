@@ -1,51 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Switch/Else-if</title>
 </head>
+
 <body>
     <label for="Operator">Select Operator</label><br>
-    <select name="operator", id="operator">
-    <option value="select">Select</option>
-    <option value="add">Addition</option>
-    <option value="sub">Subtraction</option>
-    <option value="mul">Multiplication</option>
-    <option value="div">Divison</option>
-    <option value="mod">Modulo Div</option>
+    <select name="operator" , id="operator">
+        <option value="select">Select</option>
+        <option value="add">Addition</option>
+        <option value="sub">Subtraction</option>
+        <option value="mul">Multiplication</option>
+        <option value="div">Divison</option>
+        <option value="mod">Modulo Div</option>
     </select><br><br>
     <button onclick="if_else()">If-Else</button>
-    <button onclick="switch()">Switch_case</button>
+    <button onclick="switch_case()">Switch_case</button>
 
 
 </body>
 <script>
-    function if_else(){
-       var a=20;
-       var b=10;
-       var c=document.getElementById("operator").value;
-       if(c=="add") console.log(a+b);
-       else if(c=="sub") console.log(a-b);
-       else if(c=="mul") console.log(a*b);
-       else if(c=="div") console.log(a/b);
-       else if(c=="mod") console.log(a%b);
-       else console.log("Invalid Option");
+    function if_else() {
+        var a = 20;
+        var b = 10;
+        var c = document.getElementById("operator").value;
+        if (c == "add") console.log(a + b);
+        else if (c == "sub") console.log(a - b);
+        else if (c == "mul") console.log(a * b);
+        else if (c == "div") console.log(a / b);
+        else if (c == "mod") console.log(a % b);
+        else console.log("Invalid Option");
     }
 
-    function Switch_case()
-    {
-        var a=20;
-        var b=30;
-        var c=document.getElementById("operator").value;
-        switch(c){
-            case "add" : console.log(a+b); break;
-            case "sub" : console.log(a-b); break;
-            case "mul" : console.log(a*b); break;
-            case "div" : console.log(a/b); break;
-            case "mod" : console.log(a%b); break;
+    function Switch_case() {
+        var a = 20;
+        var b = 30;
+        var c = document.getElementById("operator").value;
+        switch (c) {
+            case "add": console.log(a + b); break;
+            case "sub": console.log(a - b); break;
+            case "mul": console.log(a * b); break;
+            case "div": console.log(a / b); break;
+            case "mod": console.log(a % b); break;
             default: console.log("Invalid choice");
         }
     }
 </script>
+
 </html>
